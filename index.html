@@ -1,1419 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Converza | Social Conversation Marketing Agency</title>
-
-  <meta
-    name="description"
-    content="Converza helps brands grow through Quora marketing, Threads marketing, X marketing, sponsored posts, Q&A campaigns, community engagement and social conversation marketing."
-  />
-
-  <meta
-    name="keywords"
-    content="Quora marketing agency, Quora marketing services, Threads marketing, X marketing agency, X marketing services, social media marketing agency, Q&A marketing, community marketing, paid social posts, sponsored posts, comment marketing, social conversation marketing"
-  />
-
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="Converza" />
-  <link rel="canonical" href="https://converza.com/" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Converza | Social Conversation Marketing" />
-  <meta
-    property="og:description"
-    content="Turn conversations into attention, trust and customers."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://converza.com/" />
-
-  <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Converza | Social Conversation Marketing" />
-  <meta
-    name="twitter:description"
-    content="Quora, Threads & X marketing campaigns built around real conversations."
-  />
-
-  <!-- Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MarketingAgency",
-    "name": "Converza",
-    "url": "https://converza.com/",
-    "description": "Social conversation marketing agency specializing in Quora, Threads and X marketing campaigns.",
-    "areaServed": "Worldwide",
-    "serviceType": [
-      "Quora Marketing",
-      "Threads Marketing",
-      "X Marketing",
-      "Social Media Marketing",
-      "Community Marketing",
-      "Q&A Marketing",
-      "Sponsored Social Posts"
-    ]
-  }
-  </script>
-
-  <style>
-    :root {
-      --bg: #05060a;
-      --bg2: #090b12;
-      --card: rgba(255,255,255,0.055);
-      --card-border: rgba(255,255,255,0.10);
-      --text: #f7f8fc;
-      --muted: #9ca3b4;
-      --purple: #8b5cf6;
-      --blue: #38bdf8;
-      --pink: #ec4899;
-      --green: #22c55e;
-      --radius: 24px;
-      --max: 1180px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family:
-        Inter,
-        ui-sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
-
-      color: var(--text);
-      background:
-        radial-gradient(circle at 15% 10%, rgba(139,92,246,.20), transparent 28%),
-        radial-gradient(circle at 85% 15%, rgba(56,189,248,.12), transparent 25%),
-        radial-gradient(circle at 50% 80%, rgba(236,72,153,.08), transparent 30%),
-        var(--bg);
-
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(92%, var(--max));
-      margin: auto;
-    }
-
-    /* ---------------- NAV ---------------- */
-
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      padding: 18px 0;
-      background: rgba(5,6,10,.65);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 23px;
-      font-weight: 800;
-      letter-spacing: -1px;
-    }
-
-    .logo span {
-      color: var(--purple);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 30px;
-      align-items: center;
-      list-style: none;
-      color: #c9ccda;
-      font-size: 14px;
-    }
-
-    .nav-links a:hover {
-      color: white;
-    }
-
-    .nav-button {
-      padding: 11px 18px;
-      border-radius: 999px;
-      background: white;
-      color: black !important;
-      font-weight: 700;
-    }
-
-    /* ---------------- HERO ---------------- */
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 150px 0 100px;
-      position: relative;
-    }
-
-    .hero-content {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border: 1px solid rgba(255,255,255,.1);
-      background: rgba(255,255,255,.04);
-      border-radius: 999px;
-      color: #cbd5e1;
-      font-size: 13px;
-      margin-bottom: 25px;
-      backdrop-filter: blur(12px);
-    }
-
-    .dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #22c55e;
-      box-shadow: 0 0 15px #22c55e;
-    }
-
-    h1 {
-      font-size: clamp(48px, 8vw, 88px);
-      line-height: .98;
-      letter-spacing: -4px;
-      margin-bottom: 28px;
-    }
-
-    h1 .gradient {
-      background: linear-gradient(
-        100deg,
-        #fff,
-        #a78bfa 45%,
-        #38bdf8
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .hero p {
-      max-width: 680px;
-      margin: auto;
-      color: var(--muted);
-      font-size: 19px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      margin-top: 35px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 22px;
-      border-radius: 14px;
-      font-weight: 700;
-      transition: .25s ease;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #8b5cf6, #6366f1);
-      box-shadow: 0 15px 40px rgba(124,58,237,.25);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 20px 50px rgba(124,58,237,.4);
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.04);
-      backdrop-filter: blur(10px);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,.08);
-    }
-
-    /* ---------------- TRUST ---------------- */
-
-    .trust {
-      padding: 20px 0 100px;
-    }
-
-    .trust-box {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 1px;
-      border: 1px solid var(--card-border);
-      background: var(--card-border);
-      border-radius: var(--radius);
-      overflow: hidden;
-    }
-
-    .stat {
-      padding: 30px;
-      text-align: center;
-      background: rgba(255,255,255,.035);
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 27px;
-      margin-bottom: 4px;
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    /* ---------------- SECTIONS ---------------- */
-
-    section {
-      padding: 110px 0;
-    }
-
-    .section-heading {
-      max-width: 680px;
-      margin-bottom: 55px;
-    }
-
-    .section-heading.center {
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-
-    .kicker {
-      color: #a78bfa;
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-    }
-
-    h2 {
-      font-size: clamp(35px, 5vw, 56px);
-      line-height: 1.05;
-      letter-spacing: -2px;
-      margin-bottom: 17px;
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    /* ---------------- SERVICES ---------------- */
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 18px;
-    }
-
-    .glass-card {
-      padding: 30px;
-      border-radius: var(--radius);
-      border: 1px solid var(--card-border);
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,.075),
-          rgba(255,255,255,.025)
-        );
-      backdrop-filter: blur(20px);
-      box-shadow:
-        inset 0 1px rgba(255,255,255,.06),
-        0 25px 80px rgba(0,0,0,.20);
-      transition: transform .3s ease, border-color .3s ease;
-    }
-
-    .glass-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(139,92,246,.35);
-    }
-
-    .service-icon {
-      width: 48px;
-      height: 48px;
-      display: grid;
-      place-items: center;
-      border-radius: 15px;
-      margin-bottom: 22px;
-      background: linear-gradient(
-        135deg,
-        rgba(139,92,246,.25),
-        rgba(56,189,248,.12)
-      );
-      border: 1px solid rgba(255,255,255,.08);
-      font-size: 21px;
-    }
-
-    .glass-card h3 {
-      font-size: 21px;
-      margin-bottom: 10px;
-    }
-
-    .glass-card p {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    .service-list {
-      list-style: none;
-      color: #d5d8e2;
-      font-size: 13px;
-    }
-
-    .service-list li {
-      margin: 8px 0;
-    }
-
-    .service-list li::before {
-      content: "✓";
-      color: #8b5cf6;
-      margin-right: 8px;
-    }
-
-    /* ---------------- PROCESS ---------------- */
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 15px;
-    }
-
-    .step {
-      position: relative;
-      padding: 30px;
-    }
-
-    .number {
-      font-size: 12px;
-      color: #a78bfa;
-      font-weight: 800;
-      margin-bottom: 35px;
-    }
-
-    .step h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    .step p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* ---------------- PLATFORM ---------------- */
-
-    .platforms {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 35px;
-    }
-
-    .platform {
-      padding: 13px 20px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.1);
-      background: rgba(255,255,255,.04);
-      color: #dfe2eb;
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    /* ---------------- CTA ---------------- */
-
-    .cta {
-      padding-bottom: 120px;
-    }
-
-    .cta-box {
-      text-align: center;
-      padding: 80px 30px;
-      border-radius: 32px;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(139,92,246,.25);
-      background:
-        radial-gradient(
-          circle at 50% 0%,
-          rgba(139,92,246,.25),
-          transparent 55%
-        ),
-        rgba(255,255,255,.035);
-    }
-
-    .cta-box h2 {
-      max-width: 700px;
-      margin: auto auto 20px;
-    }
-
-    .cta-box p {
-      color: var(--muted);
-      max-width: 580px;
-      margin: auto;
-    }
-
-    /* ---------------- FAQ ---------------- */
-
-    .faq {
-      max-width: 800px;
-      margin: auto;
-    }
-
-    details {
-      border-bottom: 1px solid rgba(255,255,255,.1);
-      padding: 20px 0;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 17px;
-    }
-
-    details p {
-      color: var(--muted);
-      padding-top: 13px;
-      font-size: 15px;
-    }
-
-    /* ---------------- CONTACT ---------------- */
-
-    .contact-form {
-      max-width: 700px;
-      margin: auto;
-      padding: 35px;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-      margin-bottom: 15px;
-    }
-
-    .field.full {
-      grid-column: 1 / -1;
-    }
-
-    label {
-      font-size: 12px;
-      color: #b7bdcc;
-    }
-
-    input,
-    textarea,
-    select {
-      width: 100%;
-      border: 1px solid rgba(255,255,255,.1);
-      background: rgba(0,0,0,.25);
-      color: white;
-      padding: 14px;
-      border-radius: 12px;
-      outline: none;
-      font: inherit;
-    }
-
-    input:focus,
-    textarea:focus,
-    select:focus {
-      border-color: rgba(139,92,246,.7);
-    }
-
-    textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    select option {
-      background: #0b0c12;
-    }
-
-    /* ---------------- FOOTER ---------------- */
-
-    footer {
-      border-top: 1px solid rgba(255,255,255,.07);
-      padding: 40px 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    /* ---------------- MOBILE ---------------- */
-
-    @media(max-width: 850px) {
-
-      .nav-links {
-        display: none;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .process-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .trust-box {
-        grid-template-columns: 1fr 1fr;
-      }
-
-    }
-
-    @media(max-width: 600px) {
-
-      section {
-        padding: 80px 0;
-      }
-
-      h1 {
-        letter-spacing: -2.5px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .services-grid,
-      .process-grid,
-      .trust-box {
-        grid-template-columns: 1fr;
-      }
-
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .field.full {
-        grid-column: auto;
-      }
-
-      .contact-form {
-        padding: 22px;
-      }
-
-      .cta-box {
-        padding: 60px 20px;
-      }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Converza | Social Conversation Marketing Agency</title>
+<meta name="description" content="Converza helps brands grow through Quora marketing, Threads marketing, X marketing, sponsored posts, Q&A campaigns, community engagement and social conversation marketing." />
+<meta name="keywords" content="Quora marketing agency, Quora marketing services, Threads marketing, X marketing agency, X marketing services, social media marketing agency, Q&A marketing, community marketing, paid social posts, sponsored posts, comment marketing, social conversation marketing" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Converza" />
+<link rel="canonical" href="https://munch007.github.io/NPCS/" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Converza | Social Conversation Marketing" />
+<meta property="og:description" content="Turn conversations into attention, trust and customers." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://munch007.github.io/NPCS/" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Converza | Social Conversation Marketing" />
+<meta name="twitter:description" content="Quora, Threads & X marketing campaigns built around real conversations." />
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MarketingAgency",
+  "name": "Converza",
+  "url": "https://munch007.github.io/NPCS/",
+  "description": "Social conversation marketing agency specializing in Quora, Threads and X marketing campaigns.",
+  "areaServed": "Worldwide",
+  "serviceType": ["Quora Marketing","Threads Marketing","X Marketing","Social Media Marketing","Community Marketing","Q&A Marketing","Sponsored Social Posts"]
+}
+</script>
+
+<style>
+:root{--bg:#05060a;--bg2:#090b12;--card:rgba(255,255,255,0.055);--card-border:rgba(255,255,255,0.10);--text:#f7f8fc;--muted:#9ca3b4;--purple:#8b5cf6;--blue:#38bdf8;--pink:#ec4899;--green:#22c55e;--radius:24px;--max:1180px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:radial-gradient(circle at 15% 10%,rgba(139,92,246,.20),transparent 28%),radial-gradient(circle at 85% 15%,rgba(56,189,248,.12),transparent 25%),radial-gradient(circle at 50% 80%,rgba(236,72,153,.08),transparent 30%),var(--bg);line-height:1.6;overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}
+.container{width:min(92%,var(--max));margin:auto;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:18px 0;background:rgba(5,6,10,.65);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;}
+.logo{font-size:23px;font-weight:800;letter-spacing:-1px;}
+.logo span{color:var(--purple);}
+.nav-links{display:flex;gap:30px;align-items:center;list-style:none;color:#c9ccda;font-size:14px;}
+.nav-links a:hover{color:white;}
+.nav-button{padding:11px 18px;border-radius:999px;background:white;color:black !important;font-weight:700;}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:150px 0 100px;position:relative;}
+.hero-content{max-width:850px;margin:auto;text-align:center;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);border-radius:999px;color:#cbd5e1;font-size:13px;margin-bottom:25px;backdrop-filter:blur(12px);}
+.dot{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 15px #22c55e;}
+h1{font-size:clamp(48px,8vw,88px);line-height:.98;letter-spacing:-4px;margin-bottom:28px;}
+h1 .gradient{background:linear-gradient(100deg,#fff,#a78bfa 45%,#38bdf8);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.hero p{max-width:680px;margin:auto;color:var(--muted);font-size:19px;}
+.hero-buttons{display:flex;justify-content:center;gap:14px;margin-top:35px;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:14px;font-weight:700;transition:.25s ease;}
+.btn-primary{background:linear-gradient(135deg,#8b5cf6,#6366f1);box-shadow:0 15px 40px rgba(124,58,237,.25);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 20px 50px rgba(124,58,237,.4);}
+.btn-secondary{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);backdrop-filter:blur(10px);}
+.btn-secondary:hover{background:rgba(255,255,255,.08);}
+
+/* TRUST */
+.trust{padding:20px 0 100px;}
+.trust-box{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;border:1px solid var(--card-border);background:var(--card-border);border-radius:var(--radius);overflow:hidden;}
+.stat{padding:30px;text-align:center;background:rgba(255,255,255,.035);}
+.stat strong{display:block;font-size:27px;margin-bottom:4px;}
+.stat span{color:var(--muted);font-size:13px;}
+
+/* SECTIONS */
+section{padding:110px 0;}
+.section-heading{max-width:680px;margin-bottom:55px;}
+.section-heading.center{margin-left:auto;margin-right:auto;text-align:center;}
+.kicker{color:#a78bfa;text-transform:uppercase;font-size:12px;font-weight:800;letter-spacing:2px;margin-bottom:12px;}
+h2{font-size:clamp(35px,5vw,56px);line-height:1.05;letter-spacing:-2px;margin-bottom:17px;}
+.section-heading p{color:var(--muted);font-size:17px;}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.glass-card{padding:30px;border-radius:var(--radius);border:1px solid var(--card-border);background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));backdrop-filter:blur(20px);box-shadow:inset 0 1px rgba(255,255,255,.06),0 25px 80px rgba(0,0,0,.20);transition:transform .3s ease,border-color .3s ease;}
+.glass-card:hover{transform:translateY(-6px);border-color:rgba(139,92,246,.35);}
+.service-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;margin-bottom:22px;background:linear-gradient(135deg,rgba(139,92,246,.25),rgba(56,189,248,.12));border:1px solid rgba(255,255,255,.08);font-size:21px;}
+.glass-card h3{font-size:21px;margin-bottom:10px;}
+.glass-card p{color:var(--muted);font-size:14px;margin-bottom:20px;}
+.service-list{list-style:none;color:#d5d8e2;font-size:13px;}
+.service-list li{margin:8px 0;}
+.service-list li::before{content:"✓";color:#8b5cf6;margin-right:8px;}
+
+/* PROCESS */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;}
+.step{position:relative;padding:30px;}
+.number{font-size:12px;color:#a78bfa;font-weight:800;margin-bottom:35px;}
+.step h3{font-size:20px;margin-bottom:10px;}
+.step p{color:var(--muted);font-size:14px;}
+
+/* PLATFORMS */
+.platforms{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:35px;}
+.platform{padding:13px 20px;border-radius:999px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);color:#dfe2eb;font-weight:600;font-size:14px;}
+
+/* CTA */
+.cta{padding-bottom:120px;}
+.cta-box{text-align:center;padding:80px 30px;border-radius:32px;position:relative;overflow:hidden;border:1px solid rgba(139,92,246,.25);background:radial-gradient(circle at 50% 0%,rgba(139,92,246,.25),transparent 55%),rgba(255,255,255,.035);}
+.cta-box h2{max-width:700px;margin:auto auto 20px;}
+.cta-box p{color:var(--muted);max-width:580px;margin:auto;}
+
+/* FAQ */
+.faq{max-width:800px;margin:auto;}
+details{border-bottom:1px solid rgba(255,255,255,.1);padding:20px 0;}
+summary{cursor:pointer;font-weight:700;font-size:17px;}
+details p{color:var(--muted);padding-top:13px;font-size:15px;}
+
+/* CONTACT */
+.contact-form{max-width:700px;margin:auto;padding:35px;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;}
+.field{display:flex;flex-direction:column;gap:7px;margin-bottom:15px;}
+.field.full{grid-column:1 / -1;}
+label{font-size:12px;color:#b7bdcc;}
+input,textarea,select{width:100%;border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.25);color:white;padding:14px;border-radius:12px;outline:none;font:inherit;}
+input:focus,textarea:focus,select:focus{border-color:rgba(139,92,246,.7);}
+textarea{min-height:130px;resize:vertical;}
+select option{background:#0b0c12;}
+
+/* FOOTER */
+footer{border-top:1px solid rgba(255,255,255,.07);padding:40px 0;color:var(--muted);font-size:13px;}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+
+/* MOBILE */
+@media(max-width:850px){
+  .nav-links{display:none;}
+  .services-grid{grid-template-columns:1fr 1fr;}
+  .process-grid{grid-template-columns:1fr 1fr;}
+  .trust-box{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:600px){
+  section{padding:80px 0;}
+  h1{letter-spacing:-2.5px;}
+  .hero p{font-size:16px;}
+  .services-grid,.process-grid,.trust-box{grid-template-columns:1fr;}
+  .form-grid{grid-template-columns:1fr;}
+  .field.full{grid-column:auto;}
+  .contact-form{padding:22px;}
+  .cta-box{padding:60px 20px;}
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <div class="container nav-inner">
+<!-- NAVIGATION -->
+<nav>
+  <div class="container nav-inner">
+    <a href="#" class="logo">Conver<span>za</span></a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">How It Works</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-button">Get a Quote</a></li>
+    </ul>
+  </div>
+</nav>
 
-      <a href="#" class="logo">
-        Conver<span>za</span>
-      </a>
+<main>
 
-      <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#process">How It Works</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li>
-          <a href="#contact" class="nav-button">
-            Get a Quote
-          </a>
-        </li>
-      </ul>
-
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow"><span class="dot"></span>Conversation-led marketing for modern brands</div>
+      <h1>Turn <span class="gradient">Conversations</span> Into Customers.</h1>
+      <p>Converza is a social conversation marketing agency helping brands build visibility through Quora, Threads, X and community-focused campaigns.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Start a Campaign →</a>
+        <a href="#services" class="btn btn-secondary">Explore Services</a>
+      </div>
     </div>
-  </nav>
-
-
-  <!-- HERO -->
-  <main>
-
-    <section class="hero">
-
-      <div class="container">
-
-        <div class="hero-content">
-
-          <div class="eyebrow">
-            <span class="dot"></span>
-            Conversation-led marketing for modern brands
-          </div>
-
-          <h1>
-            Turn
-            <span class="gradient">Conversations</span>
-            Into Customers.
-          </h1>
-
-          <p>
-            Converza is a social conversation marketing agency helping
-            brands build visibility through Quora, Threads, X and
-            community-focused campaigns.
-          </p>
-
-          <div class="hero-buttons">
-
-            <a href="#contact" class="btn btn-primary">
-              Start a Campaign →
-            </a>
-
-            <a href="#services" class="btn btn-secondary">
-              Explore Services
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- TRUST / STATS -->
-    <section class="trust">
-
-      <div class="container">
-
-        <div class="trust-box">
-
-          <div class="stat">
-            <strong>Quora</strong>
-            <span>Q&A & visibility campaigns</span>
-          </div>
-
-          <div class="stat">
-            <strong>Threads</strong>
-            <span>Conversation-led campaigns</span>
-          </div>
-
-          <div class="stat">
-            <strong>X</strong>
-            <span>Social conversation campaigns</span>
-          </div>
-
-          <div class="stat">
-            <strong>Bulk</strong>
-            <span>Campaign management</span>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- SERVICES -->
-    <section id="services">
-
-      <div class="container">
-
-        <div class="section-heading center">
-
-          <div class="kicker">
-            What We Do
-          </div>
-
-          <h2>
-            Marketing that happens
-            where conversations happen.
-          </h2>
-
-          <p>
-            Build awareness and discoverability through strategically
-            planned social conversations, sponsored placements and
-            community marketing campaigns.
-          </p>
-
-        </div>
-
-
-        <div class="services-grid">
-
-          <!-- Quora -->
-          <article class="glass-card">
-
-            <div class="service-icon">Q</div>
-
-            <h3>Quora Marketing</h3>
-
-            <p>
-              Increase brand visibility through useful,
-              search-friendly answers and relevant Q&A campaigns.
-            </p>
-
-            <ul class="service-list">
-              <li>Quora Q&A campaigns</li>
-              <li>Sponsored placements</li>
-              <li>Topic research</li>
-              <li>Answer strategy</li>
-            </ul>
-
-          </article>
-
-
-          <!-- Threads -->
-          <article class="glass-card">
-
-            <div class="service-icon">T</div>
-
-            <h3>Threads Marketing</h3>
-
-            <p>
-              Put your brand into relevant conversations with
-              platform-native Threads content and campaigns.
-            </p>
-
-            <ul class="service-list">
-              <li>Threads campaigns</li>
-              <li>Conversation strategy</li>
-              <li>Sponsored content</li>
-              <li>Community engagement</li>
-            </ul>
-
-          </article>
-
-
-          <!-- X -->
-          <article class="glass-card">
-
-            <div class="service-icon">𝕏</div>
-
-            <h3>X Marketing</h3>
-
-            <p>
-              Build awareness through targeted X campaigns,
-              creator collaborations and conversation-led content.
-            </p>
-
-            <ul class="service-list">
-              <li>Sponsored posts</li>
-              <li>Creator campaigns</li>
-              <li>Conversation campaigns</li>
-              <li>Brand visibility</li>
-            </ul>
-
-          </article>
-
-
-          <!-- Paid -->
-          <article class="glass-card">
-
-            <div class="service-icon">$</div>
-
-            <h3>Paid Social Posts</h3>
-
-            <p>
-              Connect brands with relevant audiences through
-              clearly disclosed sponsored social placements.
-            </p>
-
-            <ul class="service-list">
-              <li>Sponsored posts</li>
-              <li>Creator placements</li>
-              <li>Campaign coordination</li>
-              <li>Performance tracking</li>
-            </ul>
-
-          </article>
-
-
-          <!-- Community -->
-          <article class="glass-card">
-
-            <div class="service-icon">◎</div>
-
-            <h3>Community Marketing</h3>
-
-            <p>
-              Participate meaningfully in communities where your
-              potential customers already ask questions and share ideas.
-            </p>
-
-            <ul class="service-list">
-              <li>Community research</li>
-              <li>Comment strategy</li>
-              <li>Discussion participation</li>
-              <li>Brand awareness</li>
-            </ul>
-
-          </article>
-
-
-          <!-- Bulk -->
-          <article class="glass-card">
-
-            <div class="service-icon">∞</div>
-
-            <h3>Bulk Campaigns</h3>
-
-            <p>
-              Need multiple campaigns or markets? We coordinate
-              structured multi-platform campaigns at scale.
-            </p>
-
-            <ul class="service-list">
-              <li>Multi-platform campaigns</li>
-              <li>Multiple markets</li>
-              <li>Campaign coordination</li>
-              <li>Reporting</li>
-            </ul>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- PLATFORMS -->
-    <section>
-
-      <div class="container">
-
-        <div class="section-heading center">
-
-          <div class="kicker">
-            Platforms
-          </div>
-
-          <h2>
-            Be visible where people talk.
-          </h2>
-
-          <p>
-            One campaign strategy. Multiple conversation platforms.
-          </p>
-
-        </div>
-
-        <div class="platforms">
-
-          <span class="platform">Quora</span>
-          <span class="platform">Threads</span>
-          <span class="platform">X</span>
-          <span class="platform">Reddit</span>
-          <span class="platform">Creator Communities</span>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- PROCESS -->
-    <section id="process">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <div class="kicker">
-            Simple Process
-          </div>
-
-          <h2>
-            From brief to campaign.
-          </h2>
-
-          <p>
-            A simple workflow designed to make social conversation
-            campaigns easy to launch and manage.
-          </p>
-
-        </div>
-
-
-        <div class="process-grid">
-
-          <div class="glass-card step">
-
-            <div class="number">01 / BRIEF</div>
-
-            <h3>Tell us your goal.</h3>
-
-            <p>
-              Share your product, audience, target platforms and
-              campaign objectives.
-            </p>
-
-          </div>
-
-
-          <div class="glass-card step">
-
-            <div class="number">02 / STRATEGY</div>
-
-            <h3>We build the plan.</h3>
-
-            <p>
-              We identify relevant conversations, audiences and
-              content opportunities.
-            </p>
-
-          </div>
-
-
-          <div class="glass-card step">
-
-            <div class="number">03 / EXECUTE</div>
-
-            <h3>Campaign goes live.</h3>
-
-            <p>
-              Our team coordinates approved content and campaign
-              activity across selected platforms.
-            </p>
-
-          </div>
-
-
-          <div class="glass-card step">
-
-            <div class="number">04 / REPORT</div>
-
-            <h3>Measure the work.</h3>
-
-            <p>
-              Receive campaign reporting covering activity,
-              reach and relevant performance metrics.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- CTA -->
-    <section class="cta">
-
-      <div class="container">
-
-        <div class="cta-box">
-
-          <div class="kicker">
-            Ready to Start?
-          </div>
-
-          <h2>
-            Your next customer could
-            already be in the conversation.
-          </h2>
-
-          <p>
-            Tell us what you're promoting and we'll help you
-            plan a social conversation campaign around it.
-          </p>
-
-          <div class="hero-buttons">
-
-            <a href="#contact" class="btn btn-primary">
-              Request a Campaign →
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- FAQ -->
-    <section id="faq">
-
-      <div class="container">
-
-        <div class="section-heading center">
-
-          <div class="kicker">
-            FAQ
-          </div>
-
-          <h2>
-            Frequently asked questions.
-          </h2>
-
-        </div>
-
-
-        <div class="faq">
-
-          <details>
-            <summary>
-              What is Quora marketing?
-            </summary>
-
-            <p>
-              Quora marketing uses relevant questions and useful
-              answers to increase brand awareness, educate potential
-              customers and create discoverable content around topics
-              related to a business.
-            </p>
-          </details>
-
-
-          <details>
-            <summary>
-              Do you provide Threads marketing?
-            </summary>
-
-            <p>
-              Yes. Converza provides Threads campaign planning,
-              sponsored content coordination and conversation-focused
-              marketing campaigns.
-            </p>
-          </details>
-
-
-          <details>
-            <summary>
-              Do you offer X marketing services?
-            </summary>
-
-            <p>
-              Yes. Campaigns can include sponsored posts, creator
-              collaborations and relevant conversation campaigns
-              designed around a brand's objectives.
-            </p>
-          </details>
-
-
-          <details>
-            <summary>
-              Can you manage bulk campaigns?
-            </summary>
-
-            <p>
-              Yes. We can coordinate campaigns across multiple
-              platforms, markets and campaign requirements.
-            </p>
-          </details>
-
-
-          <details>
-            <summary>
-              Do you guarantee followers or sales?
-            </summary>
-
-            <p>
-              No. Marketing performance depends on the product,
-              audience, creative, offer, platform and other factors.
-              Campaign deliverables and measurable activity are
-              defined before work begins.
-            </p>
-          </details>
-
-
-          <details>
-            <summary>
-              Do you use fake engagement?
-            </summary>
-
-            <p>
-              Our positioning is based on legitimate marketing,
-              sponsored placements and meaningful participation.
-              Campaigns should follow the applicable platform rules
-              and disclosure requirements.
-            </p>
-          </details>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-    <section id="contact">
-
-      <div class="container">
-
-        <div class="section-heading center">
-
-          <div class="kicker">
-            Start a Campaign
-          </div>
-
-          <h2>
-            Tell us what you're building.
-          </h2>
-
-          <p>
-            Submit your requirements and we'll get back to you
-            with a campaign approach.
-          </p>
-
-        </div>
-
-
-        <form
-          class="glass-card contact-form"
-          action="https://formsubmit.co/YOUR_EMAIL_HERE"
-          method="POST"
-        >
-
-          <input
-            type="hidden"
-            name="_subject"
-            value="New Converza Campaign Enquiry"
-          />
-
-          <input
-            type="hidden"
-            name="_captcha"
-            value="false"
-          />
-
-          <div class="form-grid">
-
-            <div class="field">
-
-              <label for="name">
-                Name
-              </label>
-
-              <input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Your name"
-                required
-              />
-
-            </div>
-
-
-            <div class="field">
-
-              <label for="email">
-                Email
-              </label>
-
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="you@company.com"
-                required
-              />
-
-            </div>
-
-
-            <div class="field">
-
-              <label for="company">
-                Company / Brand
-              </label>
-
-              <input
-                id="company"
-                name="company"
-                type="text"
-                placeholder="Your company"
-              />
-
-            </div>
-
-
-            <div class="field">
-
-              <label for="budget">
-                Approx. Budget
-              </label>
-
-              <select id="budget" name="budget">
-
-                <option value="">
-                  Select budget
-                </option>
-
-                <option>
-                  Under $500
-                </option>
-
-                <option>
-                  $500 – $1,000
-                </option>
-
-                <option>
-                  $1,000 – $5,000
-                </option>
-
-                <option>
-                  $5,000+
-                </option>
-
-              </select>
-
-            </div>
-
-
-            <div class="field full">
-
-              <label for="service">
-                Service
-              </label>
-
-              <select id="service" name="service">
-
-                <option>
-                  Quora Marketing
-                </option>
-
-                <option>
-                  Threads Marketing
-                </option>
-
-                <option>
-                  X Marketing
-                </option>
-
-                <option>
-                  Paid Social Campaign
-                </option>
-
-                <option>
-                  Community Marketing
-                </option>
-
-                <option>
-                  Bulk Campaign
-                </option>
-
-                <option>
-                  Multiple Services
-                </option>
-
-              </select>
-
-            </div>
-
-
-            <div class="field full">
-
-              <label for="message">
-                Campaign Details
-              </label>
-
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Tell us about your product, target audience and campaign goals..."
-                required
-              ></textarea>
-
-            </div>
-
-          </div>
-
-
-          <button
-            type="submit"
-            class="btn btn-primary"
-            style="border:0; cursor:pointer; width:100%;"
-          >
-            Request Campaign Quote →
-          </button>
-
-        </form>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- FOOTER -->
-  <footer>
-
-    <div class="container footer-inner">
-
-      <div>
-        © <span id="year"></span> Converza.
-        All rights reserved.
-      </div>
-
-      <div>
-        Social Conversation Marketing Agency
-      </div>
-
+  </div>
+</section>
+
+<!-- TRUST / STATS -->
+<section class="trust">
+  <div class="container">
+    <div class="trust-box">
+      <div class="stat"><strong>Quora</strong><span>Q&A & visibility campaigns</span></div>
+      <div class="stat"><strong>Threads</strong><span>Conversation-led campaigns</span></div>
+      <div class="stat"><strong>X</strong><span>Social conversation campaigns</span></div>
+      <div class="stat"><strong>Bulk</strong><span>Campaign management</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-heading center">
+      <div class="kicker">What We Do</div>
+      <h2>Marketing that happens where conversations happen.</h2>
+      <p>Build awareness and discoverability through strategically planned social conversations, sponsored placements and community marketing campaigns.</p>
     </div>
 
-  </footer>
+    <div class="services-grid">
 
+      <article class="glass-card">
+        <div class="service-icon">Q</div>
+        <h3>Quora Marketing</h3>
+        <p>Increase brand visibility through useful, search-friendly answers and relevant Q&A campaigns.</p>
+        <ul class="service-list">
+          <li>Quora Q&A campaigns</li>
+          <li>Sponsored placements</li>
+          <li>Topic research</li>
+          <li>Answer strategy</li>
+        </ul>
+      </article>
 
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+      <article class="glass-card">
+        <div class="service-icon">T</div>
+        <h3>Threads Marketing</h3>
+        <p>Put your brand into relevant conversations with platform-native Threads content and campaigns.</p>
+        <ul class="service-list">
+          <li>Threads campaigns</li>
+          <li>Conversation strategy</li>
+          <li>Sponsored content</li>
+          <li>Community engagement</li>
+        </ul>
+      </article>
+
+      <article class="glass-card">
+        <div class="service-icon">𝕏</div>
+        <h3>X Marketing</h3>
+        <p>Build awareness through targeted X campaigns, creator collaborations and conversation-led content.</p>
+        <ul class="service-list">
+          <li>Sponsored posts</li>
+          <li>Creator campaigns</li>
+          <li>Conversation campaigns</li>
+          <li>Brand visibility</li>
+        </ul>
+      </article>
+
+      <article class="glass-card">
+        <div class="service-icon">$</div>
+        <h3>Paid Social Posts</h3>
+        <p>Connect brands with relevant audiences through clearly disclosed sponsored social placements.</p>
+        <ul class="service-list">
+          <li>Sponsored posts</li>
+          <li>Creator placements</li>
+          <li>Campaign coordination</li>
+          <li>Performance tracking</li>
+        </ul>
+      </article>
+
+      <article class="glass-card">
+        <div class="service-icon">◎</div>
+        <h3>Community Marketing</h3>
+        <p>Participate meaningfully in communities where your potential customers already ask questions and share ideas.</p>
+        <ul class="service-list">
+          <li>Community research</li>
+          <li>Comment strategy</li>
+          <li>Discussion participation</li>
+          <li>Brand awareness</li>
+        </ul>
+      </article>
+
+      <article class="glass-card">
+        <div class="service-icon">∞</div>
+        <h3>Bulk Campaigns</h3>
+        <p>Need multiple campaigns or markets? We coordinate structured multi-platform campaigns at scale.</p>
+        <ul class="service-list">
+          <li>Multi-platform campaigns</li>
+          <li>Multiple markets</li>
+          <li>Campaign coordination</li>
+          <li>Reporting</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORMS -->
+<section>
+  <div class="container">
+    <div class="section-heading center">
+      <div class="kicker">Platforms</div>
+      <h2>Be visible where people talk.</h2>
+      <p>One campaign strategy. Multiple conversation platforms.</p>
+    </div>
+    <div class="platforms">
+      <span class="platform">Quora</span>
+      <span class="platform">Threads</span>
+      <span class="platform">X</span>
+      <span class="platform">Reddit</span>
+      <span class="platform">Creator Communities</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="section-heading">
+      <div class="kicker">Simple Process</div>
+      <h2>From brief to campaign.</h2>
+      <p>A simple workflow designed to make social conversation campaigns easy to launch and manage.</p>
+    </div>
+
+    <div class="process-grid">
+      <div class="glass-card step">
+        <div class="number">01 / BRIEF</div>
+        <h3>Tell us your goal.</h3>
+        <p>Share your product, audience, target platforms and campaign objectives.</p>
+      </div>
+      <div class="glass-card step">
+        <div class="number">02 / STRATEGY</div>
+        <h3>We build the plan.</h3>
+        <p>We identify relevant conversations, audiences and content opportunities.</p>
+      </div>
+      <div class="glass-card step">
+        <div class="number">03 / EXECUTE</div>
+        <h3>Campaign goes live.</h3>
+        <p>Our team coordinates approved content and campaign activity across selected platforms.</p>
+      </div>
+      <div class="glass-card step">
+        <div class="number">04 / REPORT</div>
+        <h3>Measure the work.</h3>
+        <p>Receive campaign reporting covering activity, reach and relevant performance metrics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <div class="cta-box">
+      <div class="kicker">Ready to Start?</div>
+      <h2>Your next customer could already be in the conversation.</h2>
+      <p>Tell us what you're promoting and we'll help you plan a social conversation campaign around it.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Request a Campaign →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-heading center">
+      <div class="kicker">FAQ</div>
+      <h2>Frequently asked questions.</h2>
+    </div>
+
+    <div class="faq">
+      <details>
+        <summary>What is Quora marketing?</summary>
+        <p>Quora marketing uses relevant questions and useful answers to increase brand awareness, educate potential customers and create discoverable content around topics related to a business.</p>
+      </details>
+      <details>
+        <summary>Do you provide Threads marketing?</summary>
+        <p>Yes. Converza provides Threads campaign planning, sponsored content coordination and conversation-focused marketing campaigns.</p>
+      </details>
+      <details>
+        <summary>Do you offer X marketing services?</summary>
+        <p>Yes. Campaigns can include sponsored posts, creator collaborations and relevant conversation campaigns designed around a brand's objectives.</p>
+      </details>
+      <details>
+        <summary>Can you manage bulk campaigns?</summary>
+        <p>Yes. We can coordinate campaigns across multiple platforms, markets and campaign requirements.</p>
+      </details>
+      <details>
+        <summary>Do you guarantee followers or sales?</summary>
+        <p>No. Marketing performance depends on the product, audience, creative, offer, platform and other factors. Campaign deliverables and measurable activity are defined before work begins.</p>
+      </details>
+      <details>
+        <summary>Do you use fake engagement?</summary>
+        <p>Our positioning is based on legitimate marketing, sponsored placements and meaningful participation. Campaigns should follow the applicable platform rules and disclosure requirements.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-heading center">
+      <div class="kicker">Start a Campaign</div>
+      <h2>Tell us what you're building.</h2>
+      <p>Submit your requirements and we'll get back to you with a campaign approach.</p>
+    </div>
+
+    <!-- ===== QUOTE FORM: emails go to admin1.wbf@gmail.com via FormSubmit ===== -->
+    <form class="glass-card contact-form" action="https://formsubmit.co/admin1.wbf@gmail.com" method="POST">
+
+      <input type="hidden" name="_subject" value="New Converza Campaign Enquiry" />
+      <input type="hidden" name="_next" value="https://munch007.github.io/NPCS/" />
+      <input type="hidden" name="_template" value="table" />
+
+      <div class="form-grid">
+
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@company.com" required />
+        </div>
+
+        <div class="field">
+          <label for="company">Company / Brand</label>
+          <input id="company" name="company" type="text" placeholder="Your company" />
+        </div>
+
+        <div class="field">
+          <label for="budget">Approx. Budget</label>
+          <select id="budget" name="budget">
+            <option value="">Select budget</option>
+            <option>Under $500</option>
+            <option>$500 – $1,000</option>
+            <option>$1,000 – $5,000</option>
+            <option>$5,000+</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label for="service">Service</label>
+          <select id="service" name="service">
+            <option>Quora Marketing</option>
+            <option>Threads Marketing</option>
+            <option>X Marketing</option>
+            <option>Paid Social Campaign</option>
+            <option>Community Marketing</option>
+            <option>Bulk Campaign</option>
+            <option>Multiple Services</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label for="message">Campaign Details</label>
+          <textarea id="message" name="message" placeholder="Tell us about your product, target audience and campaign goals..." required></textarea>
+        </div>
+
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="border:0; cursor:pointer; width:100%;">Request Campaign Quote →</button>
+
+    </form>
+    <!-- ===== END QUOTE FORM ===== -->
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> Converza. All rights reserved.</div>
+    <div>Social Conversation Marketing Agency</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
